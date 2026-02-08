@@ -3,21 +3,88 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* Tom Panos Brand — Backgrounds */
+  --color-bg-primary: #191919;
+  --color-bg-secondary: #202020;
+  --color-bg-elevated: #2f2f2f;
+  --color-bg-hover: #474c50;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Text */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #edeeee;
+  --color-text-muted: #a7a39a;
+
+  /* Blues */
+  --color-blue-primary: #407ec9;
+  --color-blue-primary-hover: #327da9;
+  --color-blue-secondary: #1e73be;
+  --color-blue-light: #0083bb;
+
+  /* Borders & Forms */
+  --color-border: #444b4e;
+  --color-border-hover: #474c50;
+  --color-form: #364954;
+
+  /* Semantic */
+  --color-success: #448361;
+  --color-warning: #d9730d;
+  --color-error: #d44e49;
+  --color-info: #407ec9;
+
+  /* Backward-compatible mappings */
+  --background: var(--color-bg-primary);
+  --foreground: var(--color-text-primary);
+  --muted: var(--color-text-muted);
+  --border: var(--color-border);
+  --card: var(--color-bg-secondary);
+  --accent: var(--color-blue-primary);
+  --accent-light: rgba(64, 126, 201, 0.1);
+
+  /* Spacing (4px base unit) */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 4rem;
+
+  /* Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-text-secondary);
+  background: var(--color-bg-primary);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-blue-primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 @layer utilities {
