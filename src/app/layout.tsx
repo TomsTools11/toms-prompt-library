@@ -42,7 +42,7 @@ export default function RootLayout({
                 href="https://learntoprompt.us"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-mono text-[var(--muted)] transition-colors duration-150 hover:text-[var(--color-blue-primary)]"
+                className="font-mono text-white transition-colors duration-150 hover:text-[var(--color-blue-primary)]"
               >
                 Learn to Prompt
               </a>
@@ -50,7 +50,7 @@ export default function RootLayout({
                 href="https://tom-panos.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-mono text-[var(--muted)] transition-colors duration-150 hover:text-[var(--color-blue-primary)]"
+                className="font-mono text-white transition-colors duration-150 hover:text-[var(--color-blue-primary)]"
               >
                 My Website
               </a>
@@ -58,13 +58,13 @@ export default function RootLayout({
             <div className="flex justify-end gap-6 text-sm">
               <Link
                 href="/prompts"
-                className="font-mono text-[var(--muted)] transition-colors duration-150 hover:text-[var(--color-blue-primary)]"
+                className="font-mono text-white transition-colors duration-150 hover:text-[var(--color-blue-primary)]"
               >
                 ./prompts
               </Link>
               <Link
                 href="/skills"
-                className="font-mono text-[var(--muted)] transition-colors duration-150 hover:text-[var(--color-blue-primary)]"
+                className="font-mono text-white transition-colors duration-150 hover:text-[var(--color-blue-primary)]"
               >
                 ./skills
               </Link>

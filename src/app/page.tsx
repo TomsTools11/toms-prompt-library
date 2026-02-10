@@ -23,7 +23,7 @@ export default function Home() {
         <h1 className="mb-5 text-4xl font-bold tracking-tight text-[var(--color-text-primary)] sm:text-5xl">
           Tom&apos;s <span className="text-gradient-hero">Prompt Library</span>
         </h1>
-        <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-[var(--muted)]">
+        <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-white">
           A curated collection of {prompts.length} AI prompts and{" "}
           {skills.length} skills for sales, marketing, research, education, and
           more. Find the right prompt or skill for any task.
@@ -38,7 +38,7 @@ export default function Home() {
           </Link>
           <Link
             href="/skills"
-            className="inline-flex items-center gap-2 rounded-pill border border-[var(--color-blue-primary)] px-7 py-3 text-sm font-medium text-[var(--color-blue-primary)] transition-all duration-150 hover:bg-[var(--accent-light)]"
+            className="inline-flex items-center gap-2 rounded-pill border border-[var(--color-blue-primary)] px-7 py-3 text-sm font-medium text-white transition-all duration-150 hover:bg-[var(--accent-light)]"
           >
             Browse Skills
             <span aria-hidden="true">&rarr;</span>
@@ -54,7 +54,7 @@ export default function Home() {
             <Link
               key={cat}
               href={`/prompts?category=${encodeURIComponent(cat)}`}
-              className="card-glow group flex items-start gap-4 rounded-lg border border-[var(--border)] bg-[var(--card)] p-5 transition-all duration-150"
+              className="card-glow group flex items-start gap-4 rounded-lg border border-[var(--border)] bg-[#103349] p-5 transition-all duration-150"
             >
               <span className="text-2xl" aria-hidden="true">
                 {categoryIcons[cat] || "📁"}
@@ -80,7 +80,7 @@ export default function Home() {
             <Link
               key={cat}
               href={`/skills?category=${encodeURIComponent(cat)}`}
-              className="card-glow group flex items-start gap-4 rounded-lg border border-[var(--border)] bg-[var(--card)] p-5 transition-all duration-150"
+              className="card-glow group flex items-start gap-4 rounded-lg border border-[var(--border)] bg-[#103349] p-5 transition-all duration-150"
             >
               <span className="text-2xl" aria-hidden="true">
                 {skillCategoryIcons[cat] || "\uD83D\uDCC1"}
