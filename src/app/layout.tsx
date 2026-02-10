@@ -42,7 +42,7 @@ export default function RootLayout({
                 href="/prompts"
                 className="font-mono text-[var(--muted)] transition-colors duration-150 hover:text-[var(--color-blue-primary)]"
               >
-                ./browse
+                ./prompts
               </Link>
               <Link
                 href="/skills"
