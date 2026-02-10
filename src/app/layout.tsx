@@ -50,6 +50,22 @@ export default function RootLayout({
               >
                 ./skills
               </Link>
+              <a
+                href="https://learntoprompt.us"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono text-[var(--muted)] transition-colors duration-150 hover:text-[var(--color-blue-primary)]"
+              >
+                Learn to Prompt
+              </a>
+              <a
+                href="https://tom-panos.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono text-[var(--muted)] transition-colors duration-150 hover:text-[var(--color-blue-primary)]"
+              >
+                My Website
+              </a>
             </div>
           </div>
         </nav>
