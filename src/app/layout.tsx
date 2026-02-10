@@ -11,11 +11,11 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Tom's Prompt Library",
   description:
-    "A curated directory of AI prompts for sales, marketing, SEO, content writing, education, and more.",
+    "A curated directory of AI prompts and skills for sales, marketing, SEO, content writing, education, and more.",
   openGraph: {
     title: "Tom's Prompt Library",
     description:
-      "A curated directory of AI prompts for sales, marketing, SEO, content writing, education, and more.",
+      "A curated directory of AI prompts and skills for sales, marketing, SEO, content writing, education, and more.",
   },
 };
 
@@ -38,6 +38,12 @@ export default function RootLayout({
                 className="font-mono text-[var(--muted)] transition-colors duration-150 hover:text-[var(--color-blue-primary)]"
               >
                 ./browse
+              </Link>
+              <Link
+                href="/skills"
+                className="font-mono text-[var(--muted)] transition-colors duration-150 hover:text-[var(--color-blue-primary)]"
+              >
+                ./skills
               </Link>
             </div>
           </div>
