@@ -34,6 +34,9 @@ export const skillCategoryIcons: Record<string, string> = {
   "Data & Analysis": "\uD83D\uDCCA",
   "Design & Frontend": "\uD83C\uDFA8",
   "AI & Prompt Engineering": "\uD83E\uDDE0",
+  "Marketing & SEO": "📈",
+  "Content Writing": "✍️",
+  "Productivity & Tools": "⚡",
 };
 
 export const skillCategoryCounts: Record<string, number> =
