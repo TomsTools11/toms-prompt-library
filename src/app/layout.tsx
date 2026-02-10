@@ -33,23 +33,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}>
         <nav className="sticky top-0 z-50 border-b border-[var(--border)] glass-nav">
-          <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+          <div className="mx-auto grid max-w-6xl grid-cols-3 items-center px-4 py-4">
             <Link href="/" className="font-mono text-lg font-bold text-[var(--color-text-primary)]">
               <span className="text-[var(--accent)]">$</span> toms-prompt-library
             </Link>
-            <div className="flex gap-6 text-sm">
-              <Link
-                href="/prompts"
-                className="font-mono text-[var(--muted)] transition-colors duration-150 hover:text-[var(--color-blue-primary)]"
-              >
-                ./prompts
-              </Link>
-              <Link
-                href="/skills"
-                className="font-mono text-[var(--muted)] transition-colors duration-150 hover:text-[var(--color-blue-primary)]"
-              >
-                ./skills
-              </Link>
+            <div className="flex justify-center gap-6 text-sm">
               <a
                 href="https://learntoprompt.us"
                 target="_blank"
@@ -66,6 +54,20 @@ export default function RootLayout({
               >
                 My Website
               </a>
+            </div>
+            <div className="flex justify-end gap-6 text-sm">
+              <Link
+                href="/prompts"
+                className="font-mono text-[var(--muted)] transition-colors duration-150 hover:text-[var(--color-blue-primary)]"
+              >
+                ./prompts
+              </Link>
+              <Link
+                href="/skills"
+                className="font-mono text-[var(--muted)] transition-colors duration-150 hover:text-[var(--color-blue-primary)]"
+              >
+                ./skills
+              </Link>
             </div>
           </div>
         </nav>
