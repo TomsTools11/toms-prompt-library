@@ -49,7 +49,7 @@ export default function PromptPage({ params }: Props) {
             {prompt.category}
           </Link>
         </div>
-        <h1 className="mb-4 font-mono text-3xl font-bold text-[var(--color-text-primary)]">{prompt.name}</h1>
+        <h1 className="mb-4 text-3xl font-bold text-[var(--color-text-primary)]">{prompt.name}</h1>
         <p className="mb-5 text-[var(--muted)] leading-relaxed">{prompt.description}</p>
         <div className="flex flex-wrap items-center gap-3">
           {prompt.tags.map((tag) => (
@@ -73,7 +73,7 @@ export default function PromptPage({ params }: Props) {
       </div>
 
       {/* Prompt body */}
-      <div className="rounded-lg border border-[var(--border)] bg-[var(--color-bg-secondary)] p-6">
+      <div className="terminal-glow rounded-lg border border-[var(--border)] bg-[var(--color-bg-primary)] p-6">
         <pre className="whitespace-pre-wrap break-words font-mono text-sm leading-relaxed text-[var(--color-text-secondary)]">
           {prompt.prompt_body}
         </pre>

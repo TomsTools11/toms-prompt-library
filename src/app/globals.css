@@ -3,33 +3,33 @@
 @tailwind utilities;
 
 :root {
-  /* Tom Panos Brand — Backgrounds */
-  --color-bg-primary: #191919;
-  --color-bg-secondary: #202020;
-  --color-bg-elevated: #2f2f2f;
-  --color-bg-hover: #474c50;
+  /* LearnToPrompt Navy Palette — Backgrounds */
+  --color-bg-primary: #021A2E;
+  --color-bg-secondary: #041E35;
+  --color-bg-elevated: #0A2A47;
+  --color-bg-hover: #0E3558;
 
   /* Text */
   --color-text-primary: #ffffff;
-  --color-text-secondary: #edeeee;
-  --color-text-muted: #a7a39a;
+  --color-text-secondary: #D1D9E0;
+  --color-text-muted: #7A8FA0;
 
   /* Blues */
-  --color-blue-primary: #407ec9;
-  --color-blue-primary-hover: #327da9;
-  --color-blue-secondary: #1e73be;
-  --color-blue-light: #0083bb;
+  --color-blue-primary: #0D91FD;
+  --color-blue-primary-hover: #3AABFE;
+  --color-blue-secondary: #5DB5FE;
+  --color-blue-light: #C2E3FE;
 
   /* Borders & Forms */
-  --color-border: #444b4e;
-  --color-border-hover: #474c50;
-  --color-form: #364954;
+  --color-border: #0E3558;
+  --color-border-hover: #14466E;
+  --color-form: #071F37;
 
   /* Semantic */
-  --color-success: #448361;
-  --color-warning: #d9730d;
-  --color-error: #d44e49;
-  --color-info: #407ec9;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  --color-info: #0D91FD;
 
   /* Backward-compatible mappings */
   --background: var(--color-bg-primary);
@@ -38,7 +38,7 @@
   --border: var(--color-border);
   --card: var(--color-bg-secondary);
   --accent: var(--color-blue-primary);
-  --accent-light: rgba(64, 126, 201, 0.1);
+  --accent-light: rgba(13, 145, 253, 0.1);
 
   /* Spacing (4px base unit) */
   --space-xs: 0.25rem;
@@ -53,10 +53,15 @@
   --radius-md: 0.5rem;
   --radius-lg: 1rem;
 
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+  /* Shadows — navy-tinted */
+  --shadow-sm: 0 1px 2px 0 rgb(2 26 46 / 0.3);
+  --shadow-md: 0 4px 6px -1px rgb(2 26 46 / 0.4);
+  --shadow-lg: 0 10px 15px -3px rgb(2 26 46 / 0.5);
+
+  /* Glow tokens */
+  --glow-card-hover: inset 0 0 30px rgba(13, 145, 253, 0.15);
+  --glow-terminal: inset 0 1px 20px rgba(13, 145, 253, 0.08);
+  --glow-terminal-hover: inset 0 1px 30px rgba(13, 145, 253, 0.14);
 
   /* Transitions */
   --transition-fast: 150ms ease;
@@ -66,7 +71,7 @@
 body {
   color: var(--color-text-secondary);
   background: var(--color-bg-primary);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -166,7 +171,7 @@ body {
 }
 
 .skill-content pre {
-  background: var(--color-bg-secondary);
+  background: var(--color-bg-primary);
   border: 1px solid var(--color-border);
   border-radius: 0.5rem;
   padding: 1rem 1.25rem;
@@ -174,6 +179,7 @@ body {
   overflow-x: auto;
   font-size: 0.85rem;
   line-height: 1.6;
+  box-shadow: var(--glow-terminal);
 }
 
 .skill-content pre code {
@@ -239,5 +245,35 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .text-gradient-hero {
+    background: linear-gradient(135deg, #0D91FD, #5DB5FE, #C2E3FE);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .glass-nav {
+    background: rgba(4, 30, 53, 0.80);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .card-glow {
+    transition: all 150ms ease;
+  }
+  .card-glow:hover {
+    border-color: var(--color-blue-primary);
+    background-color: var(--color-bg-elevated);
+    box-shadow: var(--glow-card-hover);
+  }
+
+  .terminal-glow {
+    box-shadow: var(--glow-terminal);
+    transition: box-shadow 150ms ease;
+  }
+  .terminal-glow:hover {
+    box-shadow: var(--glow-terminal-hover);
   }
 }

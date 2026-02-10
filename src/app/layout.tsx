@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -26,8 +31,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${jetbrainsMono.variable} antialiased`}>
-        <nav className="sticky top-0 z-50 border-b border-[var(--border)] bg-[var(--color-bg-secondary)]">
+      <body className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}>
+        <nav className="sticky top-0 z-50 border-b border-[var(--border)] glass-nav">
           <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
             <Link href="/" className="font-mono text-lg font-bold text-[var(--color-text-primary)]">
               <span className="text-[var(--accent)]">$</span> toms-prompt-library

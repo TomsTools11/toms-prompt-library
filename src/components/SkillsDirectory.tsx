@@ -80,12 +80,12 @@ export default function SkillsDirectory({
           placeholder="Search skills..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="flex-1 rounded-lg border border-[var(--border)] bg-[var(--color-form)] px-4 py-2.5 font-mono text-sm text-[var(--color-text-secondary)] outline-none transition-all duration-150 focus:border-[var(--color-blue-primary)] focus:shadow-[0_0_0_3px_rgba(64,126,201,0.1)] placeholder:text-[var(--muted)]"
+          className="flex-1 rounded-lg border border-[var(--border)] bg-[var(--color-form)] px-4 py-2.5 font-mono text-sm text-[var(--color-text-secondary)] outline-none transition-all duration-150 focus:border-[var(--color-blue-primary)] focus:shadow-[0_0_0_3px_rgba(13,145,253,0.15)] placeholder:text-[var(--muted)]"
         />
         <select
           value={selectedCategory}
           onChange={(e) => setSelectedCategory(e.target.value)}
-          className="rounded-lg border border-[var(--border)] bg-[var(--color-form)] px-3 py-2.5 font-mono text-sm text-[var(--color-text-secondary)] outline-none transition-all duration-150 focus:border-[var(--color-blue-primary)] focus:shadow-[0_0_0_3px_rgba(64,126,201,0.1)]"
+          className="rounded-lg border border-[var(--border)] bg-[var(--color-form)] px-3 py-2.5 font-mono text-sm text-[var(--color-text-secondary)] outline-none transition-all duration-150 focus:border-[var(--color-blue-primary)] focus:shadow-[0_0_0_3px_rgba(13,145,253,0.15)]"
         >
           <option value="">All Categories</option>
           {categories.map((cat) => (
@@ -97,7 +97,7 @@ export default function SkillsDirectory({
         <select
           value={selectedTag}
           onChange={(e) => setSelectedTag(e.target.value)}
-          className="rounded-lg border border-[var(--border)] bg-[var(--color-form)] px-3 py-2.5 font-mono text-sm text-[var(--color-text-secondary)] outline-none transition-all duration-150 focus:border-[var(--color-blue-primary)] focus:shadow-[0_0_0_3px_rgba(64,126,201,0.1)]"
+          className="rounded-lg border border-[var(--border)] bg-[var(--color-form)] px-3 py-2.5 font-mono text-sm text-[var(--color-text-secondary)] outline-none transition-all duration-150 focus:border-[var(--color-blue-primary)] focus:shadow-[0_0_0_3px_rgba(13,145,253,0.15)]"
         >
           <option value="">All Tags</option>
           {allTags.map((tag) => (
@@ -151,7 +151,7 @@ export default function SkillsDirectory({
           <Link
             key={skill.id}
             href={`/skills/${skill.slug}`}
-            className="group flex flex-col rounded-lg border border-[var(--border)] bg-[var(--card)] p-5 transition-all duration-150 hover:-translate-y-0.5 hover:border-[var(--color-blue-primary)] hover:bg-[var(--color-bg-elevated)] hover:shadow-card-hover"
+            className="card-glow group flex flex-col rounded-lg border border-[var(--border)] bg-[var(--card)] p-5 transition-all duration-150"
           >
             <div className="mb-2 flex items-center gap-2">
               <span className="text-lg" aria-hidden="true">
@@ -161,7 +161,7 @@ export default function SkillsDirectory({
                 {skill.category}
               </span>
             </div>
-            <h3 className="mb-2 font-mono font-semibold leading-tight text-[var(--color-text-primary)] transition-colors duration-150 group-hover:text-[var(--color-blue-primary)]">
+            <h3 className="mb-2 font-semibold leading-tight text-[var(--color-text-primary)] transition-colors duration-150 group-hover:text-[var(--color-blue-primary)]">
               {skill.name}
             </h3>
             <p className="mb-3 line-clamp-2 text-sm text-[var(--muted)]">

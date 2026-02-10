@@ -37,14 +37,18 @@ const config: Config = {
         info: "var(--color-info)",
       },
       fontFamily: {
-        sans: ["system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
+        sans: ["var(--font-inter)", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
         mono: ["var(--font-jetbrains-mono)", "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"],
       },
       borderRadius: {
         pill: "999px",
       },
       boxShadow: {
-        "card-hover": "0 4px 6px -1px rgb(0 0 0 / 0.4)",
+        "card-hover": "0 4px 6px -1px rgb(2 26 46 / 0.6)",
+        "glow-card-hover": "inset 0 0 30px rgba(13, 145, 253, 0.15)",
+        "glow-terminal": "inset 0 1px 20px rgba(13, 145, 253, 0.08)",
+        "glow-terminal-hover": "inset 0 1px 30px rgba(13, 145, 253, 0.14)",
+        "focus-ring": "0 0 0 3px rgba(13, 145, 253, 0.15)",
       },
     },
   },

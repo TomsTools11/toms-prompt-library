@@ -10,7 +10,7 @@ export const metadata = {
 export default function PromptsPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
-      <h1 className="mb-2 font-mono text-3xl font-bold text-[var(--color-text-primary)]">Browse Prompts</h1>
+      <h1 className="mb-2 text-3xl font-bold text-[var(--color-text-primary)]">Browse Prompts</h1>
       <p className="mb-8 text-[var(--muted)]">
         {prompts.length} prompts across {categories.length} categories
       </p>

@@ -50,7 +50,7 @@ export default function SkillPage({ params }: Props) {
             {skill.category}
           </Link>
         </div>
-        <h1 className="mb-4 font-mono text-3xl font-bold text-[var(--color-text-primary)]">{skill.name}</h1>
+        <h1 className="mb-4 text-3xl font-bold text-[var(--color-text-primary)]">{skill.name}</h1>
         <p className="mb-5 text-[var(--muted)] leading-relaxed">{skill.description}</p>
         <div className="flex flex-wrap items-center gap-3">
           {skill.tags.map((tag) => (
@@ -84,7 +84,7 @@ export default function SkillPage({ params }: Props) {
       </div>
 
       {/* Skill body */}
-      <div className="rounded-lg border border-[var(--border)] bg-[var(--color-bg-secondary)] p-6">
+      <div className="terminal-glow rounded-lg border border-[var(--border)] bg-[var(--color-bg-primary)] p-6">
         <SkillContent content={skill.skill_body} />
       </div>
     </div>
